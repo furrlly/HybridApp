@@ -1,0 +1,60 @@
+<html>
+  <head>
+  <style>
+      .btn {
+        width: 800;
+        height: 100;
+        /* background-color: red; */
+        margin-top: 5px;
+
+        text-align: center;
+        /* 수직 중앙 정렬 코드 */
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        /* 수평중앙 정렬 코드 */
+      }
+      
+    </style>
+    <script>
+      var img1 = "img/1.png";
+      var img2 = "img/2.png";
+      var img3 = "img/3.png";
+      var img4 = "img/4.png";
+      var img5 = "img/5.png";
+
+      var imglist = [img1, img2, img3, img4, img5];
+      var index = 0;
+
+      function MoveRight() {
+        if (index < imglist.length-1) {
+          index = index + 1;
+          document.getElementById("image_veiw").src = imglist[index];
+        }
+      }
+      function MoveLeft() {
+        if (index > 0) {
+          index = index - 1;
+          document.getElementById("image_veiw").src = imglist[index];
+        }
+      }
+    </script>
+    
+  </head>
+	<body>
+		<div class>
+      <img id="image_veiw" src="img/1.png" width="800" height="350">
+      <div class="btn">
+        <div class="btn_inner">
+          <button type="button" onclick="MoveLeft()">
+            이전
+          </button>
+          <button type="button" onclick="MoveRight()">
+            다음
+          </button>
+        </div>
+      </div>
+    </div>
+	</body>
+</html>
